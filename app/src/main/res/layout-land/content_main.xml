@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtScoreThisRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="240dp"
+        android:shadowColor="@color/white"
+        android:text="@string/score_this_roll"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtScoreEnhancer"
+        app:layout_constraintVertical_bias="0.125" />
+
+    <ImageView
+        android:id="@+id/imgVDie2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/dice_number_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtName"
+        app:layout_constraintVertical_bias="0.036"
+        app:srcCompat="@drawable/die_1" />
+
+    <TextView
+        android:id="@+id/txtLudicroursBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ludicrous_banner"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/txtScoreEnhancer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgVDie2"
+        app:layout_constraintVertical_bias="0.568" />
+
+    <ImageView
+        android:id="@+id/imgVDie1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/dice_number_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgVDie2"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtName"
+        app:layout_constraintVertical_bias="0.036"
+        app:srcCompat="@drawable/die_1" />
+
+    <ImageView
+        android:id="@+id/imgVDie3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/dice_number_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toEndOf="@+id/imgVDie2"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtName"
+        app:layout_constraintVertical_bias="0.036"
+        app:srcCompat="@drawable/die_1" />
+
+    <TextView
+        android:id="@+id/txtScoreEnhancer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/score_enhancer"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgVDie2"
+        app:layout_constraintVertical_bias="0.116" />
+
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_score"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtScoreThisRound"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <Button
+        android:id="@+id/btnScoreBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scoreboard_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtScore"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <EditText
+        android:id="@+id/editTxtName"
+        android:layout_width="228dp"
+        android:layout_height="41dp"
+        android:autofillHints="Your Name"
+        android:inputType="text"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <TextView
+        android:id="@+id/txtViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTxtName"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.209" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/helpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toEndOf="@+id/btnScoreBoard"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746"
+        app:srcCompat="@drawable/ic_baseline_help_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
